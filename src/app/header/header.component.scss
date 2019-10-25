@@ -1,0 +1,123 @@
+@import '../../styles/variables';
+
+.block {
+    display: none;
+}
+
+nav {
+    .navbar-toggler-icon {
+        color: $black !important;
+    }
+
+    .navbar-nav {
+        position: relative;
+
+        .nav-item {
+            font-family: 'Lato';
+            padding-right: 20px;
+        }
+    
+        .nav-auth-btn {
+            background: $blue;
+            border-radius: 30px;
+            color: $white !important;
+        }
+    
+        .nav-link {
+            color: $black;
+            text-decoration: none;
+
+            &:hover {
+                color: $dark-blue;
+            }
+        }
+
+        .active {
+            position: relative;
+            &::before {
+                content: '';
+                display: inline-block;
+                position: absolute;
+                top: 11px;
+                left: -10px;
+                width: 16px;
+                height: 16px;
+                -moz-border-radius: 7.5px;
+                -webkit-border-radius: 7.5px;
+                border-radius: 7.5px;
+                background-color: $blue;
+                opacity: 0.6;
+            }
+
+            &::after {
+                content: '';
+                display: inline-block;
+                position: absolute;
+                top: 15px;
+                left: -6px;
+                width: 8px;
+                height: 8px;
+                -moz-border-radius: 7.5px;
+                -webkit-border-radius: 7.5px;
+                border-radius: 7.5px;
+                background-color: $blue;
+            }
+        }
+    }
+
+    .text-color-blue {
+        color: $blue;
+    }
+
+    @include extra {
+        padding: 0 380px;
+
+        .nav-menu {
+            font-size: 18px;
+        }
+
+        .nav-auth-btn {
+            margin-top: 5px;
+            font-size: 15px;
+            padding: 5px 10px;
+        }
+    }
+
+    @include xxxl {
+        padding: 0 280px;
+
+        .nav-menu {
+            font-size: 15px !important;
+        }
+
+        .nav-auth-btn {
+            font-size: 12px !important;
+        }
+    }
+
+    @include lg {
+        padding: 0 100px;
+    }
+
+    @include sm {
+        padding: 0 10px;
+
+        .navbar-nav {
+            padding-bottom: 10px;
+
+            .nav-link {
+                margin-left: 3em;
+            }
+    
+            .active {
+                &::before {
+                    left: -20px !important; 
+                }
+    
+                &::after {
+                    left: -16px !important;
+                }
+            }
+        }     
+    }
+}

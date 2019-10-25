@@ -1,0 +1,222 @@
+@import '../../styles/variables';
+
+.nav-btn {
+    border: none;
+    height: 45px;
+    width: 45px;
+}
+
+.open-btn {
+    background: transparent;
+    font-size: 18px;
+}
+
+.brand-logo {
+    .navbar-brand {
+        text-decoration: none;
+        color: $black !important;
+    }
+}
+
+.close-btn {
+    border-radius: 50%;
+    background: $white;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.header {
+    nav {
+        .time-box {
+            background: $blue;
+            color: $white;
+            border-radius: 10px;
+            padding: 5px 10px;
+        }
+
+        .administrator {
+            span {
+                padding-right: 10px;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.dashboard {
+    .container {
+        .top {
+            margin: 3em 0 3em;
+            padding: 1em 2em;
+            width: 100%;
+            background-image: linear-gradient(to right, $blue, #90CBFF) !important;
+            border-radius: 10px;
+            color: $white;
+
+            .top-img {
+                position: relative;
+
+                img {
+                    z-index: 9999;
+                    position: relative;
+                }
+
+                svg {
+                    position: absolute;
+                    top: 20%;
+                    left: 5%;
+                    z-index: 0;
+                }
+            }
+
+            .top-text {
+                margin: 1em 0 0 3em;
+
+                a {
+                    color: $white;
+                }
+            }
+        }
+
+        .main {
+            padding: 2em 0;
+
+            .card {
+                margin-top: 20px;
+                background: $white;
+                border: none;
+                border-radius: 10px;
+                padding-bottom: 20px;
+
+                .card-header {
+                    border: none;
+                    background: transparent;
+                    
+                    a {
+                        font-size: 20px;
+                    }
+                    
+                    .heading {
+                        font-weight: 700;
+                        font-size: 35px;
+                    }
+                }
+
+                .card-body {
+                    height: 330px;
+                }
+
+                .cameras {
+                    overflow-y: scroll;
+                    &::-webkit-scrollbar {
+                        width: 10px;
+                      }
+                      
+                      /* Track */
+                    &::-webkit-scrollbar-track {
+                        background: $white;
+                      }
+                       
+                      /* Handle */
+                    &::-webkit-scrollbar-thumb {
+                        background: $dark-white; 
+                        border-radius: 5px;
+                      }
+                      
+                      /* Handle on hover */
+                    &::-webkit-scrollbar-thumb:hover {
+                        background: $gray; 
+                      }
+                    .cameras-list {
+                        background: $dark-white;
+                        border-radius: 10px;
+                        margin-bottom: 10px;
+                        padding: 10px;
+                        font-size: 22px;
+                        
+                        .ip {
+                            border-left: 1px solid $light-gray;
+                            border-right: 1px solid $light-gray;
+                            text-align: center;
+                        }
+
+                        .status {
+                            margin-top: -7px;
+                        }
+                        .fa-circle {
+                            font-size: 10px;
+                            color: $green;
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+
+    @include extra {
+        .heading {
+            font-size: 12px;
+        }
+    }
+
+    @include xxl {
+        .container {
+            .main {
+                .card {
+                    .card-header {
+                        .heading {
+                            font-size: 25px;
+                        }
+                    }
+                    .cameras {
+                        height: 320px;
+                        .cameras-list {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include xl {
+        .container {
+            .main {
+                .card {
+                    .card-header {
+                        .heading {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include sm {
+        .container {
+            .main {
+                .card {
+                    .card-header {
+                        .heading {
+                            font-size: 16px;
+                        }
+                    }
+                    .cameras {
+                        .cameras-list {
+                            font-size: 14px;
+
+                            .status {
+                                margin-top: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+ }

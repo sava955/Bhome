@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+@import './styles/variables';
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: 'Lato' !important;
+}
+
+.section-1 {
+    @include extra {
+        height: 1274px;
+    }
+
+    @include xxxl {
+        height: 1080px;
+    }
+
+    @include xxl {
+        height: 760px;
+    }
+
+    @include xl {
+        height: 650px;
+    }
+
+    @include md {
+        height: 760px;
+    }
+
+    @include sm {
+        height: 980px;
+    }
+}
+
+.nav {
+    z-index: 1;
+}
+
+.side-nav {
+    z-index: 9999;
+}
+
+.navbar-brand {
+    text-decoration: none;
+
+    img {
+        height: 50px;
+        width: auto;
+    }
+
+    .logo-text {
+        margin-left: 10px;
+        font-size: 30px;
+    }
+}
+
+.text-color-black {
+    .logo-text {
+        color: $black;
+    }
+}
+
+.text-color-white {
+    .logo-text {
+        color: $white;
+    }
+}
+
+.store-buttons {
+    position: relative;
+    z-index: 4;
+
+    .btn {
+        border-radius: 35px;
+        width: 230px;
+        height: 80px;
+        
+        svg {
+            margin-top: 5px;
+        }
+    }
+    
+    .android-btn {
+        background: $white;
+
+        &:hover {
+            background: $light-gray;
+        }
+    }
+    
+    .apple-btn {
+        color: $white;
+        background: $blue;
+        margin-left: 30px;
+
+        &:hover {
+            background: $dark-blue;
+        }
+    }
+
+    @include xxxl {
+        .btn {
+            width: 150px !important;
+            height: 50px !important;
+
+            svg {
+                margin-top: 1px;
+                height: 30px !important; 
+                width: 100%;
+            }
+
+            #Android_APP_on, #Available_on {
+                font-size: 14px;
+            }
+
+            #GOOGLE_PLAY, #APP_STORE {
+                font-size: 18px;
+            }
+        }
+    }
+
+    @include lg {
+        .btn {
+            width: 100px !important;
+            height: 40px !important;
+
+            svg {
+                margin-top: -5px;
+            }
+        }
+    }
+}
+
+.btn-blue {
+    background: $blue !important;
+    color: $white !important;
+    border-radius: 20px !important;
+    width: 134px;
+}
+
+.store-buttons-black {
+    .btn {
+        width: 173px;
+    }
+}
+
+.tick text {
+    font-size: 12px;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #4C5554;
+    stroke-width: 1;
+}
+
+.x.axis .tick line {
+    display: none
+}
+
+.domain {
+    display: block !important;
+    stroke: #4C5554 !important;
+    stroke-width: 2 !important;
+}
+.legend {
+    font-size: 12px;
+    font-family: sans-serif;
+    rect {
+        stroke-width: 2;
+    }
+}
+

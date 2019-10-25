@@ -1,0 +1,82 @@
+@import '../../../styles/variables';
+
+.content-1 {
+    background: url('../../../assets/images/beautiful-coffee-comfortable-914890@2x.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 765px;
+    position: relative;
+
+    .box {
+        position: absolute;
+        top: 15%;
+        right: 15%;
+        color: $white;
+        z-index: 2;
+
+        h1 {
+            font-size: 70px;
+        }
+    }
+
+    .shape {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        #curve-2 {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+    }
+
+    @include xxl {
+        height: 520px;
+
+        .box {
+            top: 0;
+        }
+    }
+
+    @include sm {
+        height: 380px;
+        background-size: cover;
+
+        .box {
+            h1 {
+                font-size: 36px;
+            }
+        }
+    }
+}
+
+.content-2 {
+    padding: 5em 0;
+
+    h1 {
+        font-size: 35px;
+    }
+
+    .percentage {
+        padding: 5em 0;
+
+        p {
+            width: 90%;
+            margin: auto;
+        }
+    }
+
+    @include xxl {
+        padding: 2em 0;
+
+        .percentage {
+            padding: 2em 0;
+        }
+    }
+}

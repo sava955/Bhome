@@ -1,0 +1,104 @@
+<ng-sidebar-container style="height: 100vh; background: #f8f8f8;" (onBackdropClicked)="_onBackdropClicked()">
+   <ng-sidebar [(opened)]="_opened" [mode]="_MODES[_modeNum]" [sidebarClass]="'side-nav shadow'"
+      [ariaLabel]="'My sidebar'">
+      <div class="d-flex justify-content-center">
+         <div class="p-2">
+            <button class="nav-btn close-btn" (click)="_toggleOpened()"><i class="fas fa-arrow-left"></i></button>
+         </div>
+         <div class="p-2 flex-grow-1 brand-logo">
+            <a class="navbar-brand" routerLink="/">
+               <img src="../../assets/images/Group 151.png" alt="logo"> Bhome
+            </a>
+         </div>
+      </div>
+      <app-side-nav></app-side-nav>
+   </ng-sidebar>
+   <div ng-sidebar-content>
+      <header class="header">
+         <nav class="navbar navbar-expand-md shadow navbar-dark">
+            <div *ngIf="!_opened">
+               <button (click)="_toggleOpened()" class="nav-btn open-btn"><i class="fas fa-bars"></i></button>
+            </div>
+            <div class="container">
+               <button *ngIf="_opened" class="navbar-toggler" type="button" data-toggle="collapse"
+                  data-target="#collapsibleNavbar">
+                  <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                  <div class="time-box">
+                     <span class="date">{{myDate | date:'h:maa'}}</span>
+                  </div>
+                  <div class="ml-auto administrator">
+                     <span class="name">Administrator Name</span>
+                     <img src="../../assets/images/Mask Group 1.png" alt="">
+                  </div>
+               </div>
+            </div>
+         </nav>
+      </header>
+      <section class="dashboard">
+         <div class="container">
+            <div class="d-md-flex flex-md-row flex-sm-column top">
+               <div class="p-2 top-img">
+                  <img src="../../assets/images/Group 332.png" alt="">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="119.582" height="84.348" viewBox="0 0 119.582 84.348">
+                     <path id="Path_2285" data-name="Path 2285" d="M884.385,3972.992l.009,22.31a14.162,14.162,0,0,1-27.646-4.331L856.741,3973a14.168,14.168,0,1,0-28.335.01l.034,91.226a14.168,14.168,0,1,0,28.335-.01l-.007-17.969a14.162,14.162,0,0,1,27.643-4.351l.008,22.31a14.168,14.168,0,0,0,28.335-.011l-.034-91.226a14.168,14.168,0,0,0-28.335.01Z" transform="translate(4078.401 -828.406) rotate(90)" fill="#b7b7b7" opacity="0.298"/>
+                   </svg>                   
+               </div>
+               <div class="p-2 flex-grow-1 top-text">
+                  <h2 class="font-weight-bold">Congratulations</h2>
+                  <p>You don’t have any reported problem. If you have some issue to report, please <a href=""><u>tap here</u></a>.</p>
+               </div>
+            </div>
+            <div class="row main">
+               <div class="col-md-5">
+                  <span class="font-weight-bold col-title"><i class="fas fa-poll"></i> Last Vote</span>
+                  <div class="card">
+                     <div class="card-header d-flex text-center justify-content-center">
+                        <a href="" class="btn p-2 flex-fill"><i class="fas fa-angle-left"></i></a>
+                        <span class="heading p-2 flex-fill">New Door For Building 3</span>
+                        <a href="" class="btn p-2 flex-fill"><i class="fas fa-angle-right"></i></a>
+                     </div>
+                     <div class="card-body">
+                        <div style="display: block;">
+                           <canvas #mycanvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels"
+                              [options]="doughnutChartOptions" [chartType]="doughnutChartType" [colors]="donutColors"
+                              width="auto" height="200">
+                           </canvas>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-7">
+                  <span class="font-weight-bold col-title"><i class="fas fa-video"></i> Cameras</span>
+                  <div class="card">
+                     <div class="card-header d-flex text-center justify-content-center">
+                        <a href="" class="btn p-2 flex-fill"><i class="fas fa-angle-left"></i></a>
+                        <span class="heading p-2 flex-fill">All Cameras</span>
+                        <a href="" class="btn p-2 flex-fill"><i class="fas fa-angle-right"></i></a>
+                     </div>
+                     <div class="card-body cameras">
+                        <div class="cameras-list d-flex" *ngFor="let camera of cameras">
+                           <div class="p-2 flex-fill font-weight-bold">
+                              {{camera.title}}
+                           </div>
+                           <div class="p-2 flex-fill ip">
+                              <span class="font-weight-bold">IP</span> {{camera.ip}}
+                           </div>
+                           <div class="p-2 flex-fill status">
+                              <span>{{camera.status}} <i class="fas fa-circle"></i></span>
+                           </div>
+                           <div class="p-2 flex-fill">
+                              <span>
+                                 <i class="fas fa-ellipsis-h"></i>
+                              </span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+   </div>
+</ng-sidebar-container>

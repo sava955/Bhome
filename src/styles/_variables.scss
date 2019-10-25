@@ -1,0 +1,75 @@
+$blue: #1d91f4;
+$dark-blue: #1469b3;
+$green: #2ecbab;
+$red: #ff4c58;
+$black: #333333;
+$dark-gray: #585858;
+$medium-gray: #707070;
+$gray: #afafaf;
+$light-gray: #d9dde6;
+$dark-white: #f8f8f8;
+$light-white: #f8fbfc;
+$white: #ffffff;
+
+$screen-sm-max: 480px;
+
+$screen-md-max: 768px;
+
+$screen-lg-max: 992px;
+
+$screen-xl-max: 1280px;
+
+$screen-xxl-max: 1440px;
+
+$screen-xxxl-max: 1920px;
+
+$screen-extra-min: 1921px;
+
+// Small devices
+@mixin sm {
+    @media (max-width: #{$screen-sm-max}) {
+        @content;
+    }
+  }
+  
+  // Medium devices
+  @mixin md {
+    @media (max-width: #{$screen-md-max}) {
+        @content;
+    }
+  }
+  
+  // Large devices
+  @mixin lg {
+    @media (max-width: #{$screen-lg-max}) {
+        @content;
+    }
+  }
+  
+  // Extra large devices
+  @mixin xl {
+    @media (max-width: #{$screen-xl-max}) {
+        @content;
+    }
+  }
+  
+  // Two extra large devices
+  @mixin xxl {
+    @media (max-width: #{$screen-xxl-max}) {
+        @content;
+    }
+  }
+  
+  // Three extra large devices
+  @mixin xxxl {
+    @media (max-width: #{$screen-xxxl-max}) {
+        @content;
+    }
+  }
+  
+  // Total extra large devices
+  @mixin extra {
+    @media (max-width: #{$screen-extra-min}) {
+        @content;
+    }
+  }

@@ -1,0 +1,185 @@
+@import '../../../styles/variables';
+
+.section {
+    position: relative;
+    padding: 5em 0;
+    overflow: hidden;
+
+    h1 {
+        font-weight: 700;
+        padding-bottom: 2em;
+    }
+
+    .features {
+        padding: 20px 0;
+
+        h4 {
+          font-weight: 700;
+          padding: 10px 0;
+          font-size: 25px;
+        }
+
+        p {
+            font-size: 20px;
+            width: 90%;
+        }
+
+        img {
+            width: 82px;
+            height: 82px;
+        }
+    }
+
+    .features-left {
+        p {
+            float: right;
+        }
+    }
+
+    .center {
+        margin: auto;
+        width: 300px;
+        text-align: center;
+        padding: 2em 0;
+        
+        .features-btn {
+            width: 258px;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            background: $blue;
+            color: $white;
+
+            &:hover {
+                background: $dark-blue;
+            }
+        }
+    }
+
+    @include extra {
+        height: 1274px;
+
+        .features {
+            height: 250px;
+        }
+
+        .mock-container {
+            position: absolute;
+            left: 50%;
+            top: -20%;
+    
+            .image-box {
+                position: relative;
+                left: -50%;
+    
+                img {
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    @include xxxl {
+        height: 1080px;
+
+        .features {
+            padding: 5px 0;
+            height: 150px;
+
+            h4 {
+                font-size: 22px;
+                padding: 5px 0;
+            }
+
+            p {
+                font-size: 18px;
+            }
+        }
+
+        .mock-container {
+            top: -20%;
+
+            .image-box {
+                .mock {
+                    height: 750px !important;
+                }
+            }
+        }
+    }
+
+    @include xxl {
+        height: 850px;
+
+        .features {
+            padding: 10px 0;
+
+            h4 {
+                font-size: 18px;
+                padding: 5px 0;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        .mock-container {
+            top: -15%;
+            
+            .image-box {
+                .mock {
+                    height: 500px !important;
+                }
+            }
+        }
+    }
+
+    @include lg {
+        height: 100%;
+
+        .features {
+            text-align: center;
+
+            p {
+                width: 100%;
+            }
+
+            img {
+                width: 82px;
+                height: 82px;
+            }
+        }
+
+        .mock-container {
+            top: 0;
+            left: 0;
+            position: relative;
+            
+            .image-box {
+                left: 0;
+                .mock {
+                    width: 100%;
+                    margin: auto;
+                }
+            }
+        }
+    }
+
+    @include md {
+        .features {
+            height: auto;
+            p {
+                height: auto;
+            }
+        }
+    }
+
+    @include sm {
+        height: 100%;
+    }
+}

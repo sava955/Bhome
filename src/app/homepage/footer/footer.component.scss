@@ -1,0 +1,31 @@
+@import '../../../styles/variables';
+
+.footer-lg {
+    padding: 5em 0;
+    background: $dark-white;
+    text-align: center;
+    height: 624px;
+
+    img {
+        padding: 5em 0;
+    }
+
+    .buttons {
+        margin: auto;
+    }
+
+    @include extra {
+        h1 {
+            font-size: 35px;
+        }
+    }
+
+    @include xxl {
+        height: 480px;
+        padding: 2em 0;
+
+        img {
+            padding: 2em 0;
+        }
+    }
+}
