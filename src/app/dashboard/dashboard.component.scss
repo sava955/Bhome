@@ -66,7 +66,7 @@
                 svg {
                     position: absolute;
                     top: 20%;
-                    left: 5%;
+                    left: 20%;
                     z-index: 0;
                 }
             }
@@ -105,7 +105,7 @@
                 }
 
                 .card-body {
-                    height: 330px;
+                    height: 350px;
                 }
 
                 .cameras {
@@ -114,37 +114,31 @@
                         width: 10px;
                       }
                       
-                      /* Track */
                     &::-webkit-scrollbar-track {
                         background: $white;
                       }
                        
-                      /* Handle */
                     &::-webkit-scrollbar-thumb {
                         background: $dark-white; 
                         border-radius: 5px;
                       }
                       
-                      /* Handle on hover */
                     &::-webkit-scrollbar-thumb:hover {
                         background: $gray; 
                       }
+
                     .cameras-list {
                         background: $dark-white;
                         border-radius: 10px;
                         margin-bottom: 10px;
                         padding: 10px;
-                        font-size: 22px;
+                        font-size: 18px;
                         
                         .ip {
                             border-left: 1px solid $light-gray;
                             border-right: 1px solid $light-gray;
-                            text-align: center;
                         }
 
-                        .status {
-                            margin-top: -7px;
-                        }
                         .fa-circle {
                             font-size: 10px;
                             color: $green;
@@ -164,17 +158,17 @@
 
     @include xxl {
         .container {
+            .top {
+                .top-text {
+                    margin: 0;
+                }
+            }
+            
             .main {
                 .card {
                     .card-header {
                         .heading {
                             font-size: 25px;
-                        }
-                    }
-                    .cameras {
-                        height: 320px;
-                        .cameras-list {
-                            font-size: 18px;
                         }
                     }
                 }
@@ -209,8 +203,11 @@
                         .cameras-list {
                             font-size: 14px;
 
-                            .status {
-                                margin-top: 0;
+                            .ip {
+                                border-top: 1px solid $light-gray;
+                                border-bottom: 1px solid $light-gray;
+                                border-left: none;
+                                border-right: none;
                             }
                         }
                     }

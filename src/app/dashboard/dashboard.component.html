@@ -78,20 +78,17 @@
                         <a href="" class="btn p-2 flex-fill"><i class="fas fa-angle-right"></i></a>
                      </div>
                      <div class="card-body cameras">
-                        <div class="cameras-list d-flex" *ngFor="let camera of cameras">
-                           <div class="p-2 flex-fill font-weight-bold">
+                        <div class="cameras-list d-md-flex flex-md-row" *ngFor="let camera of cameras">
+                           <div class="p-2 flex-fill font-weight-bold align-self-center">
                               {{camera.title}}
                            </div>
-                           <div class="p-2 flex-fill ip">
+                           <div class="p-2 flex-fill ip align-self-center text-md-center">
                               <span class="font-weight-bold">IP</span> {{camera.ip}}
                            </div>
-                           <div class="p-2 flex-fill status">
-                              <span>{{camera.status}} <i class="fas fa-circle"></i></span>
-                           </div>
-                           <div class="p-2 flex-fill">
-                              <span>
-                                 <i class="fas fa-ellipsis-h"></i>
-                              </span>
+                           <div class="p-2 flex-fill status d-flex align-self-start">
+                              <div class="p-2">{{camera.status}}</div>
+                              <div class="p-2"><span><i class="fas fa-circle"></i></span></div>
+                              <div class="p-2 ml-auto"><span><i class="fas fa-ellipsis-h"></i></span></div>
                            </div>
                         </div>
                      </div>

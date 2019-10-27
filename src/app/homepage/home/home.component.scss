@@ -1,4 +1,5 @@
 @import '../../../styles/variables';
+@import '../../../styles/navbar';
 
 .section-1 {
     background: url('../../../assets/images/Group\ 345.svg');
@@ -10,83 +11,25 @@
     position: relative;
 
     nav {
-        .nav-brand {
+        .nav-link {
+            text-decoration: none;
             color: $white;
-        }
-
-        .navbar-toggler-icon {
-            color: $white;
-        }
     
-        .navbar-nav {
-            position: relative;
-    
-            .nav-item {
-                font-family: 'Lato';
-                padding-right: 20px;
+            &:hover {
+                color: $gray;
             }
-        
-            .nav-auth-btn {
-                background: $blue;
-                border-radius: 30px;
-                color: $white !important;
-            }
-        
-            .nav-link {
-                text-decoration: none;
-                color: $white;
-
-                &:hover {
-                    color: $dark-blue;
-                }
-            }
-    
-            .active {
-                position: relative;
-                &::before {
-                    content: '';
-                    display: inline-block;
-                    position: absolute;
-                    top: 11px;
-                    left: -10px;
-                    width: 16px;
-                    height: 16px;
-                    -moz-border-radius: 7.5px;
-                    -webkit-border-radius: 7.5px;
-                    border-radius: 7.5px;
-                    background-color: $blue;
-                    opacity: 0.6;
-                }
-    
-                &::after {
-                    content: '';
-                    display: inline-block;
-                    position: absolute;
-                    top: 15px;
-                    left: -6px;
-                    width: 8px;
-                    height: 8px;
-                    -moz-border-radius: 7.5px;
-                    -webkit-border-radius: 7.5px;
-                    border-radius: 7.5px;
-                    background-color: $blue;
-                }
-            }
-        }
-    
-        .text-color-blue {
-            color: $blue;
         }
     }
 
     .content {
         padding: 6em 380px 2em;
+        position: relative;
+        z-index: 2;
 
         .box-1 {
             color: $white;
 
             h1 {
-                font-weight: 700;
                 font-size: 50px;
                 width: 80%;
             }
@@ -119,35 +62,7 @@
         }
     }
 
-    @include extra {
-        .nav {
-            padding: 0 380px;
-
-            .nav-menu {
-                font-size: 18px;
-            }
-
-            .nav-auth-btn {
-                margin-top: 5px;
-                font-size: 15px;
-                padding: 5px 10px;
-            }
-        }
-    }
-
     @include xxxl {
-
-        .nav {
-            padding: 0 280px;
-    
-            .nav-menu {
-                font-size: 15px !important;
-            }
-    
-            .nav-auth-btn {
-                font-size: 12px !important;
-            }
-        }
 
         #curve {
             width: 100%;
@@ -165,6 +80,11 @@
 
             p {
                 font-size: 16px !important;
+            }
+
+            .store-buttons {
+                position: relative;
+                z-index: 9999;
             }
         }
 
@@ -198,13 +118,15 @@
        }
     }
 
-    @include lg {
-        .nav {
-            padding: 0 100px;
-        }
-
+    @include xl {
         .content {
-            padding: 6em 100px;
+            padding: 2em 150px;
+        }
+    }
+
+    @include lg {
+        .content {
+            padding: 1em 100px;
 
             .box-1 {
                 h1 {
@@ -243,29 +165,6 @@
     }
 
     @include sm {
-        nav {
-            padding: 0 10px;
-
-            .navbar-nav {
-                background: $white;
-                padding-bottom: 10px;
-    
-                .nav-link {
-                    margin-left: 3em;
-                    color: $black;
-                }
-    
-                .active {
-                    &::before {
-                        left: -20px !important; 
-                    }
-
-                    &::after {
-                        left: -16px !important;
-                    }
-                }
-            }
-        }
         .content {
             padding: 6em 0;
         }

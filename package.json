@@ -27,8 +27,10 @@
     "ng-circle-progress": "^1.5.1",
     "ng-sidebar": "^9.1.1",
     "ng2-charts": "^2.3.0",
+    "ngx-scrollreveal": "^3.0.0",
     "popper.js": "^1.16.0",
     "rxjs": "~6.4.0",
+    "scrollreveal": "^4.0.5",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
   },

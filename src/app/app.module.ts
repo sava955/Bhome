@@ -5,6 +5,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 
 import { ChartsModule } from 'ng2-charts';
 import { SidebarModule } from 'ng-sidebar';
+import { NgsRevealModule } from 'ngx-scrollreveal';
 
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -51,7 +52,8 @@ import { FooterSmComponent } from './footer-sm/footer-sm.component';
     }),
     ChartsModule,
     SidebarModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgsRevealModule
   ],
   providers: [],
   bootstrap: [AppComponent]

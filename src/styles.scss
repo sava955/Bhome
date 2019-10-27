@@ -38,7 +38,7 @@ html, body {
     }
 }
 
-.nav {
+nav {
     z-index: 1;
 }
 
@@ -60,21 +60,9 @@ html, body {
     }
 }
 
-.text-color-black {
-    .logo-text {
-        color: $black;
-    }
-}
-
-.text-color-white {
-    .logo-text {
-        color: $white;
-    }
-}
-
 .store-buttons {
     position: relative;
-    z-index: 4;
+    z-index: 9999;
 
     .btn {
         border-radius: 35px;
@@ -145,36 +133,15 @@ html, body {
 }
 
 .store-buttons-black {
+
     .btn {
         width: 173px;
     }
-}
 
-.tick text {
-    font-size: 12px;
-}
-
-.axis path,
-.axis line {
-    fill: none;
-    stroke: #4C5554;
-    stroke-width: 1;
-}
-
-.x.axis .tick line {
-    display: none
-}
-
-.domain {
-    display: block !important;
-    stroke: #4C5554 !important;
-    stroke-width: 2 !important;
-}
-.legend {
-    font-size: 12px;
-    font-family: sans-serif;
-    rect {
-        stroke-width: 2;
+    @include sm {
+        .btn {
+            width: 100%;
+        }
     }
 }
 

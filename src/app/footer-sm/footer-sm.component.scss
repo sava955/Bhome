@@ -1,0 +1,22 @@
+@import '../../styles/variables';
+
+.footer-sm {
+    
+    .container {
+        width: 100%;
+        color: $black; 
+        background: $white;
+    }
+
+    @include extra {
+        font-size: 18px;
+    }
+
+    @include xxl {
+        font-size: 16px;
+    }
+
+    @include sm {
+        font-size: 10px;
+    }
+}
